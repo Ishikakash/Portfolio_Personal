@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import HeroImage from '../assets/heroImage.png';
-import HeroImage1 from '../assets/heroImage1.png';
 import { HiArrowNarrowRight } from 'react-icons/hi';
 import { Link } from "react-scroll";
+import a from '../assets/a(1).png';
 
+import d from '../assets/d.png'
 
 const Home = () => {
 
@@ -41,7 +41,7 @@ const Home = () => {
 
             <div onMouseOver={() => setOver(true)} onMouseOut={() => setOver(false)} >
                 <img
-                    src={over ? HeroImage1 : HeroImage}
+                    src={over ? d : a}
                     alt="arrow"
                     className="rounded-2xl mx-auto w-2/3 md:w-full"
                 />
