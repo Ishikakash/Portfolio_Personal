@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import HeroImage from '../assets/heroImage.png';
+import HeroImage1 from '../assets/heroImage1.png';
 import { HiArrowNarrowRight } from 'react-icons/hi';
 import { Link } from "react-scroll";
 
+
 const Home = () => {
+
+    const [over, setOver] = useState(false);
+
   return (
     <div name="home"
         className='h-screen w-full bg-gradient-to-b from-black via-black to-gray-800'
@@ -24,20 +29,20 @@ const Home = () => {
                     to="portfolio"
                     smooth
                     duration={500}
-                    className="group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer"
+                    className="group text-white ml-5 w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer"
                 >
                     Portfolio
-                <span className="group-hover:rotate-90 duration-300">
+                    <span className="group-hover:rotate-90 duration-300">
                     <HiArrowNarrowRight size={25} className="ml-1" />
                 </span>
                 </Link>
             </div>
         </div>
 
-            <div>
+            <div onMouseOver={() => setOver(true)} onMouseOut={() => setOver(false)} >
                 <img
-                    src={HeroImage}
-                    alt="my profile"
+                    src={over ? HeroImage1 : HeroImage}
+                    alt="arrow"
                     className="rounded-2xl mx-auto w-2/3 md:w-full"
                 />
             </div>
