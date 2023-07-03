@@ -21,8 +21,8 @@ const About = () => {
                 visually appealing but also deliver seamless functionality.
             </p>
     
-            <br />
-    
+            <br/>
+
             <p className="text-xl ml-5">
                 Leveraging my creativity and attention to detail, I aim to build user-centric websites that 
                 leave a lasting impression. Continuously staying up to date with the latest industry trends 
